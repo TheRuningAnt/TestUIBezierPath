@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,22 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l3-oD-0ng">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l3-oD-0ng">
                                 <rect key="frame" x="30" y="28" width="72" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="AKU-so-286"/>
+                                    <constraint firstAttribute="width" constant="72" id="EkV-Eg-3J0"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="left.png"/>
                                 <state key="highlighted" image="left-touch.png"/>
                                 <connections>
                                     <action selector="leftBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mif-y1-kmg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVa-vr-dyB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVa-vr-dyB">
                                 <rect key="frame" x="102" y="28" width="218" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="mBV-42-Che"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ud-63-1D9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ud-63-1D9">
                                 <rect key="frame" x="322" y="28" width="72" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8Ms-cE-cLM"/>
+                                    <constraint firstAttribute="width" constant="72" id="rMm-Vp-e5H"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="right.png"/>
                                 <state key="selected" image="right-touch.png"/>
                                 <state key="highlighted" image="right-touch.png"/>
@@ -43,6 +55,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Ud-63-1D9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3Ry-sK-xZ1"/>
+                            <constraint firstItem="6l3-oD-0ng" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="8o6-4F-cKT"/>
+                            <constraint firstItem="fVa-vr-dyB" firstAttribute="leading" secondItem="6l3-oD-0ng" secondAttribute="trailing" id="Pk7-qJ-aaz"/>
+                            <constraint firstItem="3Ud-63-1D9" firstAttribute="leading" secondItem="fVa-vr-dyB" secondAttribute="trailing" constant="2" id="XzU-fW-bFH"/>
+                            <constraint firstItem="fVa-vr-dyB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="knd-62-Yk1"/>
+                            <constraint firstItem="3Ud-63-1D9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="otJ-vu-RHs"/>
+                            <constraint firstItem="6l3-oD-0ng" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rDF-ZW-h7W"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
